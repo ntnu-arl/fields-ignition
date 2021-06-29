@@ -12,7 +12,7 @@
         <arg name="ign_args" value="-r -v 3 tomato_field.sdf"/>
     </include>
 
-    <include file="$(find fields_ignition)/launch/husky_topics.launch" />
-    <include file="$(find fields_ignition)/launch/teleop_joy.launch" />
+    <include file="$(find fields_ignition)/launch/topics.launch" />
+    <include file="$(find fields_ignition)/launch/ground_truth.launch" />
     
 </launch>

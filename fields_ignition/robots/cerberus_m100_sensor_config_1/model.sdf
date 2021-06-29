@@ -34,7 +34,7 @@
                 </geometry>
             </visual>
 
-            <visual name="left_flashlight_led">
+            <!-- <visual name="left_flashlight_led">
                 <pose frame="">0.247592 0.24728 -0.017556 0 0 2.35619</pose>
                 <geometry>
                     <mesh>
@@ -87,7 +87,7 @@
                 </spot>
                 <direction>0 0 -1</direction>
                 <cast_shadows>1</cast_shadows>
-            </light>
+            </light> -->
             <sensor name="imu_sensor" type="imu">
                 <always_on>1</always_on>
                 <update_rate>200</update_rate>
@@ -200,15 +200,15 @@
             </sensor>
 
             <visual name="camera_visual">
-                <pose>0.172 0 -0.023 0 0.174533 0</pose>
+                <pose>0.180 0 -0.025 0 0.785398 0</pose>
                 <geometry>
                     <box>
                         <size>0.02 0.025 0.025</size>
                     </box>
                 </geometry>
             </visual>
-            <!-- <sensor name="camera_front" type="camera">
-                <pose>0.172 0 -0.023 0 0.174533 0</pose>
+            <sensor name="camera_front" type="camera">
+                <pose>0.180 0 -0.025 0 0.785398 0</pose>
                 <always_on>1</always_on>
                 <update_rate>20</update_rate>
                 <camera name="camera_front">
@@ -245,7 +245,7 @@
                         <stddev>0.007</stddev>
                     </noise>
                 </camera>
-            </sensor> -->
+            </sensor>
             <visual name="laser_visual">
                 <pose>0 0 0.05 0 0 0</pose>
                 <geometry>

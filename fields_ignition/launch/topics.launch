@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
   <arg name="world_name" default="field"/>
-  <arg name="name" default="costar_husky_sensor_config_1"/>
+  <arg name="name" default="M100"/>
   <arg name="link_name" value="base_link"/>
   <arg name="sensor_prefix" value="/world/$(arg world_name)/model/$(arg name)/link/$(arg link_name)/sensor"/>
   
@@ -29,17 +29,17 @@
       <remap from="/model/$(arg name)/pose_static" to="pose_static"/>
     </node>
 
-    <!-- <node
+    <node
       pkg="subt_ros"
       type="pose_tf_broadcaster"
-      name="pose_tf_broadcaster"/> -->
+      name="pose_tf_broadcaster"/>
 
     <node
       pkg="ros_ign_bridge"
       type="parameter_bridge"
       name="ros_ign_bridge_twist"
-      args="/model/$(arg name)/cmd_vel_relay@geometry_msgs/Twist@ignition.msgs.Twist">
-      <remap from="/model/$(arg name)/cmd_vel_relay" to="cmd_vel"/>
+      args="/model/$(arg name)/cmd_vel@geometry_msgs/Twist@ignition.msgs.Twist">
+      <remap from="/model/$(arg name)/cmd_vel" to="cmd_vel"/>
     </node>
 
     <node

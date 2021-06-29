@@ -47,10 +47,10 @@ int main(int argc, char *argv[])
     ros::init(argc, argv, "pose_tf_broadcaster");
 
     ros::NodeHandle node;
-    ros::Subscriber sub = node.subscribe("/costar_husky_sensor_config_1/pose", 10, &poseCallback);
+    ros::Subscriber sub = node.subscribe("/M100/pose", 10, &poseCallback);
 
     ros::Subscriber subStatic = node.subscribe(
-        "/costar_husky_sensor_config_1/pose_static", 10, &poseStaticCallback);
+        "/M100/pose_static", 10, &poseStaticCallback);
 
     ros::spin();
 
